@@ -37,24 +37,10 @@ function Cadastro() {
       infosDoEvento.target.value,
     );
   }
-  /* useEffect(() => {
-    if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
-      fetch(URL)
-        .then(async (respostaDoServer) => {
-          if (respostaDoServer.ok) {
-            const resposta = await respostaDoServer.json();
-            setCategorias(resposta);
-            return;
-          }
-          throw new Error('Não foi possível pegar os dados');
-        });
-    }
-  }, []); */
+
   return (
     <PageDefault>
       <h1>
-
       Cadastro
       </h1>
 
@@ -106,13 +92,6 @@ function Cadastro() {
         </Button>
       </form>
 
-      <ul>
-        {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
-          </li>
-        ))}
-      </ul>
     </PageDefault>
   );
 }

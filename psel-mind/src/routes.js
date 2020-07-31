@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+/* import UpdateAdmin from './pages/AdminDashboard/update';
+import UpdateUser from './pages/UserDashboard/update'; */
 
 const Pagina404 = () => (<div>Página 404</div>)
 
@@ -17,7 +19,9 @@ export default function Routes() {
       <Route path="/login" component={Login} />
       <Route path="/cadastro" component={Cadastro} />
       <Route path="/user" component={UserDashboard} />
+      {/* <Route path="/user/update" component={UpdateUser} /> */}
       <Route path="/admin" component={AdminDashboard} />
+      {/* <Route path="/admin/update" component={UpdateAdmin} /> */}
       <Route component={Pagina404}/>
       </Switch>
     </Router>
