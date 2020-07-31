@@ -3,7 +3,7 @@ import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
 import Button from '../../components/Button';
 
-function Cadastro() {
+function UpdateAdmin() {
   const valoresIniciais = {
     nome: '',
     cpf: '',
@@ -105,16 +105,8 @@ function Cadastro() {
           Cadastrar
         </Button>
       </form>
-
-      <ul>
-        {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
-          </li>
-        ))}
-      </ul>
     </PageDefault>
   );
 }
 
-export default Cadastro;
+export default UpdateAdmin;
