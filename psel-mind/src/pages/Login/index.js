@@ -3,6 +3,7 @@ import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
 import styled, { css } from 'styled-components';
 import Button from '../../components/Button';
+import { Link } from 'react-router-dom';
 
 const LoginField = styled.form`
      display: block;
@@ -79,10 +80,11 @@ function Login() {
           value={values.senha}
           onChange={handleChange}
         />
-
-        <Button>
-          Login
-        </Button>
+        <Link to="/user">
+          <Button>
+            Login
+          </Button>
+        </Link>
       </LoginField>
     </PageDefault>
   );
