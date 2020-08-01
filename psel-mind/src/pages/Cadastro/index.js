@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
 import Button from '../../components/Button';
+import { Link } from 'react-router-dom';
 
 function Cadastro() {
   const valoresIniciais = {
@@ -86,10 +87,11 @@ function Cadastro() {
           value={values.senha}
           onChange={handleChange}
         />
-
+<Link to="/user">
         <Button>
           Cadastrar
         </Button>
+</Link>
       </form>
 
     </PageDefault>

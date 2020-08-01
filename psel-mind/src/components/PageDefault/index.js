@@ -14,7 +14,7 @@ const Main = styled.main`
 function PageDefault({ children }) {
   return (
     <>
-      <Menu />
+      <Menu name="login" />
       <Main>
         {children}
       </Main>

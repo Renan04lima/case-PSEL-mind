@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
 import Button from '../../components/Button';
+import { Link } from 'react-router-dom';
 
 function UpdateUser() {
   const valoresIniciais = {
@@ -37,12 +38,11 @@ function UpdateUser() {
       infosDoEvento.target.value,
     );
   }
-  
+
   return (
     <PageDefault>
       <h1>
-
-      Cadastro
+        Atualizar
       </h1>
 
       <form onSubmit={function handleSubmit(infosDoEvento) {
@@ -70,7 +70,7 @@ function UpdateUser() {
           name="cpf"
           value={cpfMask(values.cpf)}
           onChange={handleChange}
-          />
+        />
 
         <FormField
           label="Email"
@@ -78,8 +78,8 @@ function UpdateUser() {
           name="email"
           value={values.email}
           onChange={handleChange}
-          />
-        
+        />
+
         <FormField
           label="Senha"
           type="password"
@@ -87,10 +87,11 @@ function UpdateUser() {
           value={values.senha}
           onChange={handleChange}
         />
-
-        <Button>
-          Atualizar
-        </Button>
+        <Link to="/user">
+          <Button>
+            Atualizar
+          </Button>
+        </Link>
       </form>
     </PageDefault>
   );
